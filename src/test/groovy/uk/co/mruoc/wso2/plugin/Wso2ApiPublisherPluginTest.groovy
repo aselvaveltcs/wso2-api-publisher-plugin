@@ -16,6 +16,24 @@ class Wso2ApiPublisherPluginTest {
         assertThat(project.extensions.apiPublisher instanceof Wso2ApiPublisherExtension).isTrue()
     }
 
+    @Test
+    void addsUpdateApiTaskToProject() {
+        applyPluginToProject()
+        assertThat(project.tasks.updateApi instanceof UpdateApiTask).isTrue()
+    }
+
+    @Test
+    void addsSetStatusApiTaskToProject() {
+        applyPluginToProject()
+        assertThat(project.tasks.setApiStatus instanceof SetApiStatusTask).isTrue()
+    }
+
+    @Test
+    void addsRemoveApiTaskToProject() {
+        applyPluginToProject()
+        assertThat(project.tasks.removeApi instanceof RemoveApiTask).isTrue()
+    }
+
     private void applyPluginToProject() {
         project.plugins.apply(Wso2ApiPublisherPlugin)
     }
