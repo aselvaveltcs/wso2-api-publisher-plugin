@@ -90,7 +90,7 @@ uploadArchives {
                 description 'Gradle plugin that enables WSO2 API publishing'
                 groupId 'com.github.michaelruocco'
                 artifactId 'wso2-api-publisher-plugin'
-                version '0.0.2'
+                version '0.0.3'
                 url 'https://github.com/michaelruocco/wso2-api-publisher-plugin'
 
                 developers {
