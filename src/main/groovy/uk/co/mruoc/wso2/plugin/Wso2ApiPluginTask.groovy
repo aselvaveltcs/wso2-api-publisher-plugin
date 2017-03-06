@@ -8,7 +8,7 @@ import uk.co.mruoc.wso2.DefaultApiPublisherClient
 
 abstract class Wso2ApiPluginTask extends DefaultTask {
 
-    private static final EXTENSION_NAME = "wso2ApiPublisher"
+    private static final EXTENSION_NAME = "apiPublisher"
 
     def getExtension() {
         def extensions = project.extensions
