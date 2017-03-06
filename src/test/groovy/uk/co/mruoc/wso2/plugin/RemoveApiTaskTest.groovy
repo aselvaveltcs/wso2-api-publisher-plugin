@@ -48,7 +48,7 @@ class RemoveApiTaskTest {
     }
 
     private getExtension() {
-        project.extensions.create('wso2ApiPublisher', Wso2ApiPublisherExtension)
+        project.extensions.create('apiPublisher', Wso2ApiPublisherExtension)
     }
 
     private createApi() {
