@@ -5,7 +5,7 @@ import org.gradle.api.tasks.Input
 import uk.co.mruoc.wso2.*
 
 @Slf4j
-class RemoveApiTask extends Wso2PluginTask implements SelectApiParams {
+class RemoveApiTask extends Wso2ApiPluginTask implements SelectApiParams {
 
     @Input
     String apiName = ''
@@ -40,7 +40,7 @@ class RemoveApiTask extends Wso2PluginTask implements SelectApiParams {
         log.info("attempting to remove api " + apiName + " version " + apiVersion)
         client.removeApi(this)
         if (client.apiExists(apiName))
-            throw new Wso2PluginException("failed to remove api " + apiName + " " + apiVersion)
+            throw new Wso2ApiPluginException("failed to remove api " + apiName + " " + apiVersion)
     }
 
 }

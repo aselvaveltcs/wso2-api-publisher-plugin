@@ -6,7 +6,7 @@ import org.gradle.api.tasks.Optional
 import uk.co.mruoc.wso2.*
 
 @Slf4j
-class SetApiStatusTask extends Wso2PluginTask implements SetStatusParams {
+class SetApiStatusTask extends Wso2ApiPluginTask implements SetStatusParams {
 
     @Input
     String apiName = ''
@@ -71,7 +71,7 @@ class SetApiStatusTask extends Wso2PluginTask implements SetStatusParams {
         }
         client.setStatus(this)
         if (!checkApiHasRequiredStatus(client)) {
-            throw new Wso2PluginException("api status failed to update")
+            throw new Wso2ApiPluginException("api status failed to update")
         }
     }
 

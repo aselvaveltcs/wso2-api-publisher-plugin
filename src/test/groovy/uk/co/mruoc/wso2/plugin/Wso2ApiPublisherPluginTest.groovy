@@ -6,7 +6,7 @@ import org.junit.Test
 
 import static org.assertj.core.api.Assertions.assertThat
 
-class ApiPublisherPluginTest {
+class Wso2ApiPublisherPluginTest {
 
     private Project project = ProjectBuilder.builder().build()
 
@@ -17,7 +17,7 @@ class ApiPublisherPluginTest {
     }
 
     private void applyPluginToProject() {
-        project.plugins.apply(ApiPublisherPlugin)
+        project.plugins.apply(Wso2ApiPublisherPlugin)
     }
 
 }

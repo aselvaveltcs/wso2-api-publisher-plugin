@@ -14,7 +14,7 @@ import uk.co.mruoc.wso2.ApiVisibility
 import uk.co.mruoc.wso2.CommaSeparatedStringConverter
 
 @Slf4j
-class UpdateApiTask extends Wso2PluginTask implements AddApiParams {
+class UpdateApiTask extends Wso2ApiPluginTask implements AddApiParams {
 
     @Input
     String apiName = ''
@@ -263,7 +263,7 @@ class UpdateApiTask extends Wso2PluginTask implements AddApiParams {
         boolean complete = lastUpdated.isAfter(updateTime) || lastUpdated.isEqual(updateTime)
         log.info(api.getName() + " " + api.getVersion() + " last updated " + lastUpdated + " checking against update time " + updateTime + " update complete " + complete)
         if (!complete)
-            throw new Wso2PluginException("update not complete")
+            throw new Wso2ApiPluginException("update not complete")
         log.info("successfully updated api " + api.getName() + " " + api.getVersion())
     }
 
