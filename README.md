@@ -1,5 +1,9 @@
 # WSO2 API Manager Publisher Plugin
 
+[![Build Status](https://travis-ci.org/michaelruocco/wso2-api-publisher-plugin.svg?branch=master)](https://travis-ci.org/michaelruocco/wso2-api-publisher-plugin)
+[![Coverage Status](https://coveralls.io/repos/github/michaelruocco/wso2-api-publisher-plugin/badge.svg?branch=master)](https://coveralls.io/github/michaelruocco/wso2-api-publisher-plugin?branch=master)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.michaelruocco/wso2-api-publisher-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.michaelruocco/wso2-api-publisher-plugin)
+
 This plugin is a wrapper around the [WSO2 Api Manager Client](https://github.com/michaelruocco/wso2-api-manager-client)
 library that allows deployment of APIs directly from a gradle script.
 
