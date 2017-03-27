@@ -2,9 +2,9 @@ package uk.co.mruoc.wso2.plugin
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
-import uk.co.mruoc.wso2.ApiPublisherClient
 import uk.co.mruoc.wso2.Credentials
-import uk.co.mruoc.wso2.DefaultApiPublisherClient
+import uk.co.mruoc.wso2.publisher.ApiPublisherClient
+import uk.co.mruoc.wso2.publisher.DefaultApiPublisherClient
 
 abstract class Wso2ApiPluginTask extends DefaultTask {
 

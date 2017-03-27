@@ -4,14 +4,14 @@ import groovy.util.logging.Slf4j
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Optional
 import org.joda.time.DateTime
-import uk.co.mruoc.wso2.AddApiParams
-import uk.co.mruoc.wso2.Api
-import uk.co.mruoc.wso2.ApiEndpointType
-import uk.co.mruoc.wso2.ApiPublisherClient
-import uk.co.mruoc.wso2.ApiSubscriptions
 import uk.co.mruoc.wso2.ApiTierAvailability
-import uk.co.mruoc.wso2.ApiVisibility
 import uk.co.mruoc.wso2.CommaSeparatedStringConverter
+import uk.co.mruoc.wso2.publisher.ApiEndpointType
+import uk.co.mruoc.wso2.publisher.ApiPublisherClient
+import uk.co.mruoc.wso2.publisher.ApiSubscriptions
+import uk.co.mruoc.wso2.publisher.ApiVisibility
+import uk.co.mruoc.wso2.publisher.addapi.AddApiParams
+import uk.co.mruoc.wso2.publisher.getapi.Api
 
 @Slf4j
 class UpdateApiTask extends Wso2ApiPluginTask implements AddApiParams {

@@ -2,7 +2,8 @@ package uk.co.mruoc.wso2.plugin
 
 import groovy.util.logging.Slf4j
 import org.gradle.api.tasks.Input
-import uk.co.mruoc.wso2.*
+import uk.co.mruoc.wso2.SelectApiParams
+import uk.co.mruoc.wso2.publisher.ApiPublisherClient
 
 @Slf4j
 class RemoveApiTask extends Wso2ApiPluginTask implements SelectApiParams {

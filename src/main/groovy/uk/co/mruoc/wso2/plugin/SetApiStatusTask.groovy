@@ -3,7 +3,10 @@ package uk.co.mruoc.wso2.plugin
 import groovy.util.logging.Slf4j
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Optional
-import uk.co.mruoc.wso2.*
+import uk.co.mruoc.wso2.publisher.ApiPublisherClient
+import uk.co.mruoc.wso2.publisher.ApiStatus
+import uk.co.mruoc.wso2.publisher.getapi.Api
+import uk.co.mruoc.wso2.publisher.setstatus.SetStatusParams
 
 @Slf4j
 class SetApiStatusTask extends Wso2ApiPluginTask implements SetStatusParams {
