@@ -24,7 +24,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.github.michaelruocco:wso2-api-publisher-plugin:1.0.0'
+        classpath 'com.github.michaelruocco:wso2-api-publisher-plugin:1.0.1'
     }
 }
 ```
@@ -54,6 +54,7 @@ apiPublisher {
     username = 'admin'
     password = 'admin'
     hostUrl = 'http://localhost:9443'
+    sslEnabled = true   //true is the default value so this always on, but it can be useful to turn off for testing
 }
 ```
 

@@ -4,7 +4,6 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 import uk.co.mruoc.wso2.Credentials
 import uk.co.mruoc.wso2.publisher.ApiPublisherClient
-import uk.co.mruoc.wso2.publisher.DefaultApiPublisherClient
 
 abstract class Wso2ApiPluginTask extends DefaultTask {
 
@@ -17,7 +16,7 @@ abstract class Wso2ApiPluginTask extends DefaultTask {
 
     @TaskAction
     run() {
-        def client = new DefaultApiPublisherClient(extension.hostUrl)
+        def client = extension.getPublisherClient()
         Credentials credentials = extension.getCredentials()
         client.login(credentials)
         try {
