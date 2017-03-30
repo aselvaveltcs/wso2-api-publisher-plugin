@@ -1,10 +1,9 @@
 package uk.co.mruoc.wso2.plugin
 
-import uk.co.mruoc.http.client.SimpleHttpClient
-import uk.co.mruoc.http.client.insecure.InsecureHttpClientFactory
 import uk.co.mruoc.wso2.Credentials
 import uk.co.mruoc.wso2.publisher.ApiPublisherClient
 import uk.co.mruoc.wso2.publisher.DefaultApiPublisherClient
+import uk.co.mruoc.wso2.publisher.InsecureDefaultApiPublisherClient
 
 class Wso2ApiPublisherExtension {
 
@@ -57,7 +56,7 @@ class Wso2ApiPublisherExtension {
     ApiPublisherClient getPublisherClient() {
         if (sslEnabled)
             return new DefaultApiPublisherClient(hostUrl)
-        return new DefaultApiPublisherClient(new SimpleHttpClient(InsecureHttpClientFactory.build()), hostUrl)
+        return new InsecureDefaultApiPublisherClient(hostUrl);
     }
 
 }

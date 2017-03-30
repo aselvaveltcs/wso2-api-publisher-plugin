@@ -24,7 +24,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.github.michaelruocco:wso2-api-publisher-plugin:1.0.1'
+        classpath 'com.github.michaelruocco:wso2-api-publisher-plugin:1.0.2'
     }
 }
 ```
