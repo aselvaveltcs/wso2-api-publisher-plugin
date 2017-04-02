@@ -45,6 +45,7 @@ class RemoveApiTaskTest {
         extension.username = "admin"
         extension.password = "admin"
         extension.hostUrl = urlBuilder.build(PORT)
+        extension.sslEnabled = false
     }
 
     private getExtension() {

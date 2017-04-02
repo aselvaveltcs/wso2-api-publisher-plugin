@@ -1,10 +1,12 @@
 package uk.co.mruoc.wso2.plugin
 
+import groovy.util.logging.Slf4j
 import uk.co.mruoc.wso2.Credentials
 import uk.co.mruoc.wso2.publisher.ApiPublisherClient
 import uk.co.mruoc.wso2.publisher.DefaultApiPublisherClient
 import uk.co.mruoc.wso2.publisher.InsecureDefaultApiPublisherClient
 
+@Slf4j
 class Wso2ApiPublisherExtension {
 
     private static final DEFAULT_USERNAME = "admin"
@@ -46,6 +48,7 @@ class Wso2ApiPublisherExtension {
     }
 
     void setSslEnabled(boolean sslEnabled) {
+        log.info("setting ssl enabled " + sslEnabled)
         this.sslEnabled = sslEnabled
     }
 
@@ -54,9 +57,12 @@ class Wso2ApiPublisherExtension {
     }
 
     ApiPublisherClient getPublisherClient() {
-        if (sslEnabled)
+        if (sslEnabled) {
+            log.info("creating default api publisher client")
             return new DefaultApiPublisherClient(hostUrl)
-        return new InsecureDefaultApiPublisherClient(hostUrl);
+        }
+        log.info("creating INSECURE default api publisher client")
+        return new InsecureDefaultApiPublisherClient(hostUrl)
     }
 
 }
