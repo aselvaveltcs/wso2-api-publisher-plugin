@@ -13,6 +13,8 @@ import uk.co.mruoc.wso2.publisher.ApiVisibility
 import uk.co.mruoc.wso2.publisher.addapi.AddApiParams
 import uk.co.mruoc.wso2.publisher.getapi.Api
 
+import static org.joda.time.DateTimeZone.UTC
+
 @Slf4j
 class UpdateApiTask extends Wso2ApiPluginTask implements AddApiParams {
 
@@ -231,7 +233,7 @@ class UpdateApiTask extends Wso2ApiPluginTask implements AddApiParams {
 
     @Override
     perform(ApiPublisherClient client) {
-        DateTime updateTime = DateTime.now()
+        DateTime updateTime = DateTime.now(UTC)
         createOrUpdateApi(client)
         verifyUpdate(client, updateTime)
     }
